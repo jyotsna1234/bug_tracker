@@ -13,7 +13,7 @@
 </style>
 <script>
 $(function() {
-    $("#datepicker").datepicker({
+    $(".datepicker").datepicker({
        //showOn: both - datepicker will come clicking the input box as well as the calendar icon
        //showOn: button - datepicker will come only clicking the calendar icon
        showOn: 'button',
@@ -108,14 +108,12 @@ $(function() {
 				
 					<div id="fe1"><label id="labeldesc" >Bug description contains:</label><input id="inputdesc" type="text" name="bugdesc" ></div>
 					<div id="fe2"><label id="labelcmt">Bug comments contains:</label><input id="inputcmt" type="text" name="bugdesc"></div>
-					<div id="fe3"><label id="labelsince">Bug comments since: </label><input id="datepicker" type="text" name="cmtsince" value="23-11-2013" /> </div>
-					<div id="fe4"><label id="reporton">"Reported on " from date:</label><input id="inputreport" type="text" name="inputreport" /> <label id="selectreport" >[select]</label><label id="report2">to:</label> <input id="inputreport2" type="text" name="inputreport2"/>
-						<label id="selectreport2" >[select]</label></div>
-						<div id="fe5"><label id="update">"last updated on" from date:</label><input id="inputupdate" type="text" name="inputupdate" /> <label id="selectupdate" >[select]</label><label id="updateon2">to:</label> <input id="inputupdate2" type="text" name="inputupdate2"/>
-						<label id="selectupdate2" >[select]</label></div>
+					<div id="fe3"><label id="labelsince">Bug comments since: </label><input id="datepicker" class="datepicker" type="text" name="cmtsince"/> </div>
+					<div id="fe4"><label id="reporton">"Reported on " from date:</label><input id="inputreport" class="datepicker" type="text" name="inputreport" /> <label id="report2">to:</label> <input id="inputreport2" class="datepicker" type="text" name="inputreport2"/></div>
+					<div id="fe5"><label id="update">"last updated on" from date:</label><input id="inputupdate" class="datepicker" type="text" name="inputupdate" /> <label id="updateon2">to:</label> <input id="inputupdate2" class="datepicker" type="text" name="inputupdate2"/></div>
 						
-						<div id="fe6"> <label id= "process"  >Process :</label>
-							<select id="lb8" name="list_box_name[]" size="3" multiple="multiple">
+					<div id="fe6"> <label id= "process"  >Process :</label>
+					<select id="lb8" name="list_box_name[]" size="3" multiple="multiple">
 					<option value="option1">Option1</option>
 					
 					</select>
@@ -133,8 +131,10 @@ $(function() {
 				
 				<div id="fe10"><label>Use"and"logic :</label><input type="radio" for="use and logic" name="group"/><label>Use"or"logic :</label><input type="radio" for="useorlogic" name="group"/><br></div>
 				
-				<div id="fe11"><input  id="b1"  type="button" value="Search"/></div>
-				<div id="fe12"><input id="b2"  type="button" value="Save Search criteria as query"/></div>
+				<div id="fe11">
+				<input  id="b1"  type="button" value="Search"/>
+				<input id="b2"  type="button" value="Save Search criteria as query"/>
+				</div>
 				
 				</form>
 			
